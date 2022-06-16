@@ -1,0 +1,501 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+	background-color: rgb(243, 243, 243);
+}
+
+
+.clear{
+    clear: both;
+}
+header{
+	width: 100%;
+	background-color: white;
+}
+header img{
+    width: 150px;
+    height: 70px;
+    float: left;
+    margin:5px 30px;
+}
+
+nav.menu-mobile {
+    display: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url(../Projeto\ -\ 3/imgs/menu-mobile.png);
+    background-size: 100% 100%;
+    float: right;
+    margin-top: 28px;
+}
+
+nav.menu-mobile ul {
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+}
+
+nav.menu-mobile li {
+    padding: 10px 0;
+}
+
+nav.menu-mobile li a {
+    text-decoration: none;
+    color: #181818;
+}
+
+.menu-desktop{
+    float: right;
+    margin-top: 32px;
+}
+
+.menu-desktop li {
+    list-style-type: none;
+    padding: 10px;
+    margin-right: 50px;
+    display: inline;
+}
+
+.menu-desktop li a {
+    text-decoration: none;
+    color: rgb(39, 39, 39)
+}
+@media screen and (max-width:768px) and (min-width:320px) {
+    header nav.menu-desktop {
+        display: none;
+    }
+
+    nav.menu-mobile {
+        display: block;
+    }
+}
+
+section.venda{
+    min-height: 90%;
+    padding: 90px 0;
+}
+
+.line-titulo{
+	margin:0 auto;
+	text-align: center;
+}
+
+.ln1{
+	position: relative;
+	height: 2px;
+	width: 80%;
+	top:0;
+	background:black;
+	margin: 0 auto;
+}
+
+
+.line-titulo h2{
+	position: relative;
+	background: white;
+	display: inline-block;
+	text-align: center;
+	font-size: 27px;
+	padding:0 20px;
+	background-color: rgb(243, 243, 243);
+}
+
+section.venda{
+	padding:90px 2%;
+	min-height: 90%;
+}
+
+.content-venda{
+	margin-top:50px;
+}
+
+.sidebar{
+	float: left;
+	width: 30%;
+	margin: 40px 0;
+}
+
+.search1{
+	width:90%;
+}
+
+.search1 h2{
+	font-size: 24px;
+	color: black;
+	font-weight: normal;
+}
+
+.search1 .barra-preco{
+	width: 100%;
+	height: 20px;
+	background: white;
+	border:1px solid #ccc;
+	margin-top:8px;
+	border-radius: 20px;
+	position: relative;
+}
+
+.barra-preco-fill{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 30%;
+	height: 20px;
+	border-radius: 20px;
+	background:linear-gradient(to bottom,rgb(255,255,255),rgb(200,200,200));
+}
+
+.pointer-barra{
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	left: calc(30% - 13px);
+	top: -3px;
+	cursor: pointer;
+	border-radius: 8px;
+	background:linear-gradient(to bottom,rgb(255,255,255),rgb(180,180,180));
+	border:1px solid  #777;
+}
+
+.valor-pesquisa{
+	margin-top:8px;
+}
+
+.valor-pesquisa p{
+	color: black;
+	font-size: 15px;
+}
+
+.valor-pesquisa p:nth-of-type(1){
+	float: left;
+}
+
+.valor-pesquisa p:nth-of-type(2){
+	float: right;
+}
+
+.search2{
+	margin-top:40px;
+}
+
+.search2 h2{
+	font-size: 24px;
+	color: black;
+	font-weight: normal;
+}
+
+.form-venda-wraper{
+	margin-top:10px;
+}
+
+.form-venda-wraper input[type=checkbox]{
+	display: none;
+}
+
+.form-venda-wraper label{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border:1px solid #ccc;
+	border-radius: 3px;
+	vertical-align: top;
+	cursor: pointer;
+	position: relative;
+}
+
+
+.circle{
+	width: 8px;
+	height: 8px;
+	display: none;
+	border-radius: 4px;
+	background: black;
+	position: absolute;
+	left: 6px;
+	top: 6px;
+}
+
+
+.form-venda-wraper input[type=checkbox]:checked + label > .circle{
+	display: block;
+}
+
+.form-venda-wraper span{
+	padding:0 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+.vitrine-destaque{
+	width: 70%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+	flex-wrap: wrap;
+}
+
+.vitrine-destaque-single{
+    border: 1px solid black;
+	max-height: 400px;
+	margin: 40px 0;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.vitrine-destaque-single img{
+    width: 100%;
+    height: 200px;
+	
+}
+
+.vitrine-destaque-single h4{
+    font-family: sans-serif;
+    padding: 10px 0;
+}
+
+.vitrine-destaque-single p{
+    font-family: sans-serif;
+    padding: 10px 0;
+	
+}
+
+.vitrine-destaque-single a{
+    width: 150px;
+    height: 40px;
+    display: block;
+    padding: 12px 12px;
+    text-decoration: none;
+    background-color: #3c3c3c;
+    color: white;
+    margin: 20px 63px;
+}
+
+section.informacao{
+    width: 100%;
+    display: flex;
+    
+}
+
+
+.autor {
+    background-color: #0c0c0c;
+    text-align: center;
+    height: 60px;
+    padding: 10px 0;
+}
+
+.autor img{
+    width: 120px;
+    height: 40px;
+    float: left;
+    margin-left: 30px;
+}
+
+.autor h2 {
+    font-size: 20px;
+    color: white;
+    font-family: Copperplate Gothic;
+    float: right;
+    padding: 10px 30px;
+}
+
+/*------------------------------*/
+
+
+/*Venda Individual*/
+
+section.venda-individual{
+	width: 80%;
+	margin: 0 auto;
+}
+
+section.galeria{
+	width: 100%;
+}
+
+
+.principal-img-galeria img{
+	width: 70%;
+	display: block;
+	margin: 0px auto;
+}
+
+.carrosel-galeria{
+	display: flex;
+	background-color: brown;
+	
+}
+
+.carrosel-galeria-single{
+	width: 150px;
+	height: 100px;
+	border: 1px solid black;
+	display: block;
+	margin: 0 auto;
+}
+
+.carrosel-galeria-single img{
+	width: 100%;
+	height: 100%;
+}
+
+section.information-venda-individual{
+	margin: 60px 0;
+	width: 100%;
+	display: flex;
+}
+
+.information-carro{
+	width: 58%;
+	border-radius: 8px;
+	border: 1px ridge rgb(230, 228, 228);
+	background-color: white;
+	font-family: sans-serif;
+}
+
+.titulo-carro{
+	color: rgb(232, 48, 48);
+	font-size: 25px;
+	padding: 30px;
+	text-align: center;
+}
+
+.carro-dados {
+	display: flex;
+    text-align: center;
+	flex-wrap: wrap;
+}
+
+.carro-dados-single{
+	width: 50%;
+	margin:0 auto;
+	display: block;
+	padding: 60px;
+}
+
+.carro-dados-single p{
+	color: #848484;
+}
+
+.carro-dados-single h2{
+	font-size: 20px;
+	color: #0b0b0b;
+}
+
+.information-venda-individual{
+	justify-content: space-between;
+}
+
+.information-compra{
+	width: 40%;
+	background-color: white;
+	border: 1px groove rgb(230, 228, 228);
+	border-radius: 8px;
+	text-align: center;
+	padding: 30px;
+	font-family: sans-serif;
+}
+
+.information-compra h2{
+	font-size: 35px;
+}
+
+.information-compra p{
+	color:#848484;
+	font-size: 13px;
+	padding: 10px 0;
+}
+
+.information-compra input{
+	width: 100%;
+	height: 35px;
+	margin:10px 0;
+	border: none;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+.information-compra textarea{
+	width: 100%;
+	height: 100px;
+	margin:10px 0;
+	padding: 10px;
+}
+
+.information-compra form label{
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 13px;
+}
+
+.information-compra form #checkbox1{
+	width: 20px;
+	height: 20px;
+	display: flex;
+	
+}
+
+.information-compra form a{
+	width: 80%;
+	height: 70px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	padding: 25px 0;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(255, 56, 56);
+	font-size: 20px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.information-compra form a:hover{
+	background-color: rgb(123, 0, 0);
+	transition: 0.5s;
+}
+
+/*----------------*/
+
+/* Sobre Nós */
+
+.about-us{
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.about-us img{
+width: 100%;
+margin: 40px 0;
+}
+
+.about-us h2{
+	text-align: center;
+	margin:20px 0;
+}
+
+.text-about-us2{
+	width: 100%;
+	display: flex;
+	margin:90px 0;
+}
+
+.text-about-us2 img{
+	width: 40%;
+}
+
+.text-about-us2 p{
+	padding: 60px 0;
+}
